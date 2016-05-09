@@ -1,8 +1,19 @@
 'use strict';
 
 var States = function () {
+  var self = this;
+
   this.states = {};
   this.prefix = 'state-';
+
+  document.addEventListener('click', function (evt) {
+    var e = evt || window.event,
+        target = e.target || e.srcElement;
+
+    if (target && target.hasAttribute('data-state')) {
+      self.toggle(target.getAttribute('data-state'));
+    }
+  });
 };
 
 States.prototype.unset = function (state, cb) {

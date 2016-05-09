@@ -7,9 +7,14 @@
 <body>
   <input type="checkbox" id="check1" onclick="states.toggle('input1Checked')" />
   <label for="check1">Check me</label>
+
   <br>
+
   <input type="checkbox" id="check2" onclick="states.toggle('input2Checked', function(e) { console.info(states); })" />
   <label for="check2">Check me too (I has callback in console)</label>
+
+  <p data-state="paragraphClicked">I switch states using the <code>data-state</code> attribute.</p>
+
   <script defer src="../index.js"></script>
 </body>
 </html>
