@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>States test</title>
+</head>
+<body>
+  <input type="checkbox" id="check1" onclick="states.toggle('input1Checked')" />
+  <label for="check1">Check me</label>
+  <br>
+  <input type="checkbox" id="check2" onclick="states.toggle('input2Checked', function(e) { console.info(states); })" />
+  <label for="check2">Check me too (I has callback in console)</label>
+  <script defer src="../index.js"></script>
+</body>
+</html>
