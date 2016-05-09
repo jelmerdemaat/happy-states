@@ -1,0 +1,27 @@
+{
+  "name": "davinci-states",
+  "version": "0.1.0",
+  "description": "Makes simple state management possible",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jelmerdemaat/davinci-states.git"
+  },
+  "keywords": [
+    "state",
+    "states",
+    "state management"
+  ],
+  "author": "Jelmer de Maat <post@jelmerdemaat.nl> (http://jelmerdemaat.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jelmerdemaat/davinci-states/issues"
+  },
+  "homepage": "https://github.com/jelmerdemaat/davinci-states#readme"
+}
