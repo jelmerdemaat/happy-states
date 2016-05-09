@@ -1,6 +1,6 @@
 {
   "name": "davinci-states",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Makes simple state management possible",
   "main": "index.js",
   "directories": {
