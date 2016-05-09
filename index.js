@@ -40,5 +40,3 @@ States.prototype.toggle = function (state, cb) {
     cb();
   }
 };
-
-var states = new States();
