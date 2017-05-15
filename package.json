@@ -1,13 +1,20 @@
 {
   "name": "happy-states",
   "version": "0.1.1",
-  "description": "Makes simple state management possible",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Makes simple state management possible via `document.documentElement.classList`",
+  "main": "src/happystates.js",
+  "files": [
+    "src/happystates.js",
+    "dist/happystates.min.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run prettier && npm run uglify && npm run docs",
+    "docs": "cp dist/happystates.min.js docs/happystates.min.js",
+    "uglify": "uglifyjs src/happystates.js -o dist/happystates.min.js --screw-ie8 --compress --mangle toplevel",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server -g",
+    "serve-docs": "http-server ./docs -g",
+    "prettier": "prettier --single-quote --write src/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +33,10 @@
   "bugs": {
     "url": "https://github.com/jelmerdemaat/happy-states/issues"
   },
-  "homepage": "https://github.com/jelmerdemaat/happy-states#readme"
+  "homepage": "https://github.com/jelmerdemaat/happy-states#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "prettier": "^1.3.1",
+    "uglifyjs": "^2.4.10"
+  }
 }

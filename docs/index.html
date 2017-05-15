@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>States test</title>
 </head>
 <body>
@@ -15,9 +17,9 @@
 
   <p data-state="paragraphClicked">I switch states using the <code style="pointer-events: none">data-state</code> attribute.</p>
 
-  <script src="../index.js"></script>
+  <script src="happystates.min.js"></script>
   <script>
-    var states = new States();
+    var states = new States('superCoolStatePrefix_');
   </script>
 </body>
 </html>
