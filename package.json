@@ -1,5 +1,5 @@
 {
-  "name": "davinci-states",
+  "name": "happy-states",
   "version": "0.1.1",
   "description": "Makes simple state management possible",
   "main": "index.js",
@@ -11,17 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jelmerdemaat/davinci-states.git"
+    "url": "git+ssh://git@github.com/jelmerdemaat/happy-states.git"
   },
   "keywords": [
     "state",
     "states",
-    "state management"
+    "state management",
+    "state classes",
+    "state classlist",
+    "classlist"
   ],
   "author": "Jelmer de Maat <post@jelmerdemaat.nl> (http://jelmerdemaat.nl)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jelmerdemaat/davinci-states/issues"
+    "url": "https://github.com/jelmerdemaat/happy-states/issues"
   },
-  "homepage": "https://github.com/jelmerdemaat/davinci-states#readme"
+  "homepage": "https://github.com/jelmerdemaat/happy-states#readme"
 }
