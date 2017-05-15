@@ -4,22 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>States test</title>
+  <title>Happy states test</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  pre {
+    background: lightgrey;
+    padding: 0.5em;
+    font-family: monospace;
+  }
+
+  #result {
+    white-space: pre-wrap;
+  }
+  </style>
 </head>
 <body>
-  <input type="checkbox" id="check1" onclick="states.toggle('input1Checked')" />
-  <label for="check1">Check me</label>
+  <h1>Happy states!</h1>
+  <p><em>A small script that manages your pages state via <code>document.documentElement.classlist</code>.</em> 😎</p>
 
-  <br>
+  <ul>
+    <li>GitHub: <a href="https://github.com/jelmerdemaat/happy-states">https://github.com/jelmerdemaat/happy-states</a></li>
+    <li>NPM: <a href="https://www.npmjs.com/package/happy-states">https://www.npmjs.com/package/happy-states</a></li>
+    <li>@jelmerdemaatr: <a href="https://twitter.com/jelmerdemaat">https://twitter.com/jelmerdemaat</a></li>
+  </ul>
 
-  <input type="checkbox" id="check2" onclick="states.toggle('input2Checked', function(e) { console.info(states); })" />
-  <label for="check2">Check me too (I has callback in console)</label>
+  <p>Used configuration:</p>
+  <pre>var states = new States('coolPrefix-');</pre>
+  <p>Test on these elements:</p>
 
-  <p data-state="paragraphClicked">I switch states using the <code style="pointer-events: none">data-state</code> attribute.</p>
+  <hr>
+
+  <div>
+    <input type="checkbox" id="check1" onclick="states.toggle('input1Checked', update)" />
+    <label for="check1">Check me (I have a callback)</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="check2" onclick="states.toggle('input2Checked', update)" />
+    <label for="check2">Check me too (I have a callback)</label>
+  </div>
+
+  <div>
+    <button type="button" onclick="states.toggle('buttonClicked', update)" />
+      And click me too! (I have a callback)
+    </button>
+  </div>
+
+  <p data-state="paragraphClicked">
+    “I am a <code>&lt;p&gt;  </code> element and I switch states using the <code style="pointer-events: none">data-state</code>
+    attribute (I have no callback).”
+  </p>
+
+  <hr>
+
+  <p>Current <code>document.documentElement.classList</code>:</p>
+
+  <pre id="result"></pre>
 
   <script src="happystates.min.js"></script>
   <script>
-    var states = new States('superCoolStatePrefix_');
+    var states = new States('coolPrefix-');
+
+    var result = document.querySelector('#result');
+
+    function update () {
+      result.innerHTML = document.documentElement.classList;
+    }
   </script>
 </body>
 </html>
