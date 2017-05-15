@@ -1,6 +1,6 @@
 {
   "name": "happy-states",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Makes simple state management possible via `document.documentElement.classList`",
   "main": "src/happystates.js",
   "files": [
