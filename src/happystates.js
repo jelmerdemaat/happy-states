@@ -1,9 +1,10 @@
 'use strict';
 
 // Main class definition
-function States(prefix, attribute) {
+function States(prefix, attribute, preventDefault) {
   this.prefix = prefix || 'state-';
   this.attr = attribute || 'data-state';
+  this.preventDefault = preventDefault || true;
 
   document.addEventListener(
     'click',
@@ -11,6 +12,10 @@ function States(prefix, attribute) {
       var e = evt || window.event, target = e.target || e.srcElement;
 
       if (target && target.hasAttribute(this.attr)) {
+        if (this.preventDefault) {
+          evt.preventDefault();
+        }
+
         this.toggle(target.getAttribute(this.attr));
       }
     }.bind(this)
