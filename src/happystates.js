@@ -9,7 +9,8 @@ function States(prefix, attribute, preventDefault) {
   document.addEventListener(
     'click',
     function(evt) {
-      var e = evt || window.event, target = e.target || e.srcElement;
+      var e = evt || window.event,
+        target = e.target || e.srcElement;
       target = target.closest('[' + this.attr + ']');
 
       if (target && target.hasAttribute(this.attr)) {
