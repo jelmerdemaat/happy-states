@@ -10,6 +10,7 @@ function States(prefix, attribute, preventDefault) {
     'click',
     function(evt) {
       var e = evt || window.event, target = e.target || e.srcElement;
+      target = target.closest('[' + this.attr + ']');
 
       if (target && target.hasAttribute(this.attr)) {
         if (this.preventDefault) {
