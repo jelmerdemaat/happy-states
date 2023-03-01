@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/jelmerdemaat/happy-states#readme",
   "devDependencies": {
-    "http-server": "^0.10.0",
+    "http-server": "^14.1.1",
     "prettier": "^1.3.1",
     "uglify-js": "^3.6.3"
   }
